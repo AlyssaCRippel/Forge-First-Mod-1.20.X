@@ -1,6 +1,7 @@
 package net.Alyssa.the_10_realms;
 
 import com.mojang.logging.LogUtils;
+import net.Alyssa.the_10_realms.block.ModBlocks;
 import net.Alyssa.the_10_realms.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -28,7 +29,10 @@ public class TheTenRealmsMod {
     public TheTenRealmsMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //register items class
         ModItems.register(modEventBus);
+        //register block class
+        ModBlocks.register(modEventBus);
 
 
 
@@ -53,6 +57,8 @@ public class TheTenRealmsMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }
     }
 

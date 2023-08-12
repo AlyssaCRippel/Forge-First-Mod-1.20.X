@@ -1,0 +1,13 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "the_10_realms:alexandrite_block"
+    }
+  ],
+  "result": {
+    "item": "the_10_realms:alexandrite",
+    "count": 9
+  }
+}

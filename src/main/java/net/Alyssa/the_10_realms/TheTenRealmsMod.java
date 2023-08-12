@@ -2,6 +2,7 @@ package net.Alyssa.the_10_realms;
 
 import com.mojang.logging.LogUtils;
 import net.Alyssa.the_10_realms.block.ModBlocks;
+import net.Alyssa.the_10_realms.item.ModCreativeModeTab;
 import net.Alyssa.the_10_realms.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +30,8 @@ public class TheTenRealmsMod {
     public TheTenRealmsMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //register the creative mode tabs
+        ModCreativeModeTab.register(modEventBus);
         //register items class
         ModItems.register(modEventBus);
         //register block class
